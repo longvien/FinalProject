@@ -1,0 +1,10 @@
+Dòng lệnh sau đây mắc lỗi ở đâu?
+grade = int(input("Nhap diem cua ban: "))
+if grade < 60:
+print ("Ban khong vuot qua lop hoc.")
+else:
+    print("Chuc mung! Ban da vuot qua duoc lop hoc.")
+a. Thiếu dấu chấm phẩy ở cuối dòng
+b. Dòng lệnh input sai
+c. Chưa lùi lề (indentation) sau lệnh if
+d. Không có điểm để nhập

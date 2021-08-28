@@ -1,0 +1,5 @@
+Nhà nào lớn nhất thế giới?
+a.Nhà máy
+b.Nhà ở
+c.Nhà nước
+d.Nhà trọ

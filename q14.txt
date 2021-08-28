@@ -1,0 +1,4 @@
+Xã đông nhất là xã nào?
+a.Xã hội
+b.Phường xã
+c.Phố xã

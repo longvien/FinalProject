@@ -1,0 +1,9 @@
+Chương trình sau sẽ in ra mấy lần dòng chữ “Steam4VN”
+
+bang_diem = [4]
+for diem in bang_diem:
+    print('Steam4VN')
+a. 1 lần
+b. 2 lần
+c. 4 lần
+d. Không có câu trả lời đúng

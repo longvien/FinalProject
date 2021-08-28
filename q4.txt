@@ -1,0 +1,5 @@
+Phương thức khởi tạo 1 lớp tên Student nhận vào tham số name có cấu trúc thế nào?
+a. def __init__(self, name):
+b. def __init__(name):
+c. def STEAM(self, name):
+d. def STEAM(name)

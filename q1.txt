@@ -1,0 +1,5 @@
+Câu lệnh nào dưới đây tạo mảng hợp lệ:
+a. trials = [6. 5. 7]
+b. trials = []
+c. trials = [6; 5; 7]
+d. trials = {6, 5, 7}

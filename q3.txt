@@ -1,0 +1,5 @@
+Câu lệnh nào dưới đây dùng để lấy phần tử cuối của array trials = [1, 2, 3, 5, 6, 7]
+a. trials[5]
+b. trials[6]
+c. trials[len(trials) - 1]
+d. Cả a và c
