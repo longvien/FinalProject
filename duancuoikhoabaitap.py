@@ -2,6 +2,14 @@ import pygame
 import random
 import time
 import turtle
+import ctypes
+def Mbox(title, text, style):
+    return ctypes.windll.user32.MessageBoxW(0, text, title, style)
+Mbox('Cách Chơi Như Sau:', '''
+- Game có 5 câu lập trình và 15 câu đố vui
+- Các bạn chọn đáp án abcd để trả lời câu hỏi.
+- Bầm nút "Ok" để tiếp tục.
+''', 0)
 # Class thể hiện đối tượng Câu hỏi
 # Một đối tượng Question gồm có 2 fields: 
 # - question: đề bài
