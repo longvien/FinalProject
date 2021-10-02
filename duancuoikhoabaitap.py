@@ -238,5 +238,3 @@ data = read_data() + generate_math_questions()
 random.shuffle(data)
 for question in data:
     ask_question(question)
-
-z
