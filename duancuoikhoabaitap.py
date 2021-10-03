@@ -3,13 +3,25 @@ import random
 import time
 import turtle
 import ctypes
+import sys
+import tkinter
+from tkinter import messagebox
+
+root = tkinter.Tk().withdraw()
+is_windows = sys.platform.startswith('win')
+
 def Mbox(title, text, style):
-    return ctypes.windll.user32.MessageBoxW(0, text, title, style)
+    if is_windows:
+        return ctypes.windll.user32.MessageBoxW(0, text, title, style)
+    else:
+        return messagebox.showinfo(0, text)
+
 Mbox('Cách Chơi Như Sau:', '''
 - Game có 5 câu lập trình và 15 câu đố vui
 - Các bạn chọn đáp án abcd để trả lời câu hỏi.
 - Bầm nút "Ok" để tiếp tục.
 ''', 0)
+
 # Class thể hiện đối tượng Câu hỏi
 # Một đối tượng Question gồm có 2 fields: 
 # - question: đề bài
@@ -19,7 +31,6 @@ class Question:
         self.question = question
         self.answer = answer
 
-        
 # Class thể hiện trạng thái hiện tại của trò chơi
 class GameState:
     # Điểm số hiện tại
@@ -45,8 +56,10 @@ def play_sound(file):
     pygame.mixer.init()
     sound = pygame.mixer.Sound(file)
     sound.play()
+
 # Vẽ hình nhân vật.
 avatar = turtle.Turtle()         
+
 def draw_avatar(image):
     # Phải gọi lệnh turtle.addshape trước khi vẽ ảnh.
     turtle.addshape(image)  
@@ -58,6 +71,7 @@ def draw_avatar(image):
 
 # Khởi tạo cây bút chuyên dùng để vẽ thời gian.
 pen_timer = turtle.Turtle()
+
 def draw_timer():
     # Ẩn con rùa.
     pen_timer.hideturtle()
@@ -73,6 +87,7 @@ def draw_timer():
     pen_timer.write(round(state.get_timer()), font=get_font(20))
     # Vẽ lại điểm số sau 1000ms (1 giây) nữa
     turtle.Screen().ontimer(draw_timer, 1000)
+
 # Khai báo dữ liệu câu hỏi và đáp án
 def read_data():
     # Đọc câu hỏi và đáp án từ Files.
@@ -101,7 +116,6 @@ def read_data():
     # Trả về mảng dữ liệu data     
     return data
 
-
 # Sinh ra các câu hỏi tính nhẩm ngẫu nhiên Siêu Trí Tuệ
 def generate_math_questions():
     # Ban đầu, danh sách câu hỏi trống.
@@ -129,8 +143,6 @@ def generate_math_questions():
         data.append(Question(question, str(answer)))
     # Trả về danh sách câu hỏi tính nhẩm Siêu Trí Tuệ.
     return data
-
-
 
 # Trả về font chữ với kích thước được cho.
 def get_font(font_size):
@@ -177,6 +189,7 @@ def ask_question(question):
     # Hỏi người dùng nhập câu trả lời qua giao diện Turtle
     result = turtle.textinput("Siêu Lập Trình", "Câu trả lời của bạn là gì?\n")    # So sánh kết quả của người chơi nhập vào với đáp án
     check_result(result, question.answer)
+
 # So sánh câu trả lời với đáp án
 def check_result(result, answer):
     # Thời gian người chơi trả lời câu hỏi (tính bằng giây).
@@ -224,6 +237,7 @@ def setup_turtle():
     
 # Gọi hàm thiết lập màn hình    
 setup_turtle()
+
 # Chơi nhạc
 play_music("music.wav")
 
@@ -232,7 +246,6 @@ state.reset_timer()
 draw_timer()
 # Kết hợp các câu đố vui đọc từ File với các câu tính nhẩm Siêu Trí Tuệ.
 data = read_data() + generate_math_questions()
-
 
 # Xáo trộn các câu hỏi một cách ngẫu nhiên
 random.shuffle(data)
