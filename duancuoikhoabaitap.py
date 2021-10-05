@@ -3,18 +3,18 @@ import random
 import time
 import turtle
 import ctypes
-import sys
-import tkinter
-from tkinter import messagebox
-
-root = tkinter.Tk().withdraw()
-is_windows = sys.platform.startswith('win')
+# import sys
+# import tkinter
+# from tkinter import messagebox
+# 
+# root = tkinter.Tk().withdraw()
+# is_windows = sys.platform.startswith('win')
 
 def Mbox(title, text, style):
-    if is_windows:
-        return ctypes.windll.user32.MessageBoxW(0, text, title, style)
-    else:
-        return messagebox.showinfo(0, text)
+    #if is_windows:
+    return ctypes.windll.user32.MessageBoxW(0, text, title, style)
+    #else:
+        #return messagebox.showinfo(str(0), text)
 
 Mbox('Cách Chơi Như Sau:', '''
 - Game có 5 câu lập trình và 15 câu đố vui
@@ -231,7 +231,7 @@ def setup_turtle():
     # Thiết lập kích thước màn hình 
     screen.setup(1040, 584)
     # Thiết lập ảnh nền cho màn hình
-    screen.bgpic('background.gif')
+    screen.bgpic('background2.gif')
     # Thiết lập tiêu đề cho cửa sổ chương trình
     turtle.title("Siêu lập trình")
     
