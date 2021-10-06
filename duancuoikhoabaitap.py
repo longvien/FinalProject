@@ -229,7 +229,7 @@ def setup_turtle():
     # Màn hình Turtle
     screen = turtle.Screen()
     # Thiết lập kích thước màn hình 
-    screen.setup(1040, 584)
+    screen.setup(1140, 594)
     # Thiết lập ảnh nền cho màn hình
     screen.bgpic('background2.gif')
     # Thiết lập tiêu đề cho cửa sổ chương trình
