@@ -158,7 +158,7 @@ def draw_score():
     # Xoá, để khi vẽ điểm không bị đè lên nhau.
     pen_score.clear()
     # Đổi màu.
-    pen_score.color('white')
+    pen_score.color('black')
     # Đặt vị trí.
     pen_score.setposition(340, 110)
     # Viết điểm số ra màn hình.
