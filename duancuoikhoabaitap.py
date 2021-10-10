@@ -80,7 +80,7 @@ def draw_timer():
     # Xoá, để khi vẽ điểm không bị đè lên nhau.
     pen_timer.clear()
     # Đổi màu.
-    pen_timer.color('yellow')
+    pen_timer.color('red')
     # Đặt vị trí.
     pen_timer.setposition(-240, 170)
     # Viết điểm số ra màn hình.
