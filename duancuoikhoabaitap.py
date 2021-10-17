@@ -221,7 +221,7 @@ def check_result(result, answer):
     time.sleep(0.5)
     print("Thời gian trả lời câu hỏi là:", round(time_taken), "giây")
     if bonus > 0:
-        print("Bạn nhận được điểm thưởng là", bonus, "vì trả lời nhanh")            
+        print("Bạn nhận được số điểm  thưởng là ", bonus, "vì trả lời nhanh")            
     print("Điểm hiện tại của bạn là: ", state.score)
 
 # Thiết lập màn hình giao diện turtle
