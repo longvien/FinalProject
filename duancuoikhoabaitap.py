@@ -19,6 +19,7 @@ def Mbox(title, text, style):
 Mbox('Cách Chơi Như Sau:', '''
 - Game có 5 câu lập trình và 15 câu đố vui
 - Các bạn chọn đáp án abcd để trả lời câu hỏi.
+- Nếu bạn trả lời nhanh thì sẽ được điểm thưởng
 - Bầm nút "Ok" để tiếp tục.
 ''', 0)
 
